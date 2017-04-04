@@ -17,5 +17,7 @@ public class helloWorld {
         System.out.println("추가11:11");
         System.out.println("추가11:12");
         System.out.println("추가11:14");
+
+        System.out.println(5*5);
     }
 }
