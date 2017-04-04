@@ -19,5 +19,6 @@ public class helloWorld {
         System.out.println("추가11:14");
 
         System.out.println(5*5);
+        System.out.println(6*6);
     }
 }
