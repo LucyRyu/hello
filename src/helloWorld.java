@@ -11,6 +11,7 @@ public class helloWorld {
         int nHowManyDays = 90;
         int nOneDayHours = 8;
         int nTotalHours = 0;
+
         nTotalHours = nHowManyDays * nOneDayHours;
         System.out.println("총 수업시간은 "+nTotalHours+"시간 입니다.");
         System.out.println("추가");

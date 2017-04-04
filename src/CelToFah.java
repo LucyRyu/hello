@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 /**
  * Created by danawacomputer on 2017-04-04.
+ * 섭씨 -> 화씨를 계산해보세요.
+ * (섭씨 X 1.8) + 32= 화씨
  */
 public class CelToFah {
     public static void main (String [] args)

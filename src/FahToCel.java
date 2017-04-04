@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 /**
  * Created by danawacomputer on 2017-04-04.
+ * 화씨 -> 섭씨를 계산해보세요.
+ * (화씨 - 32) / 1.8 = 섭씨
  */
 public class FahToCel {
     public static void main (String [] args)
