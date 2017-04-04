@@ -11,5 +11,6 @@ public class iPadProSale {
         System.out.println("iPadPro 원가: 999000원");
         System.out.println("iPadPro 15%할인, 할인금액 "+iPadSaleCost+"원");
         System.out.println("판매금액:"+ iPadReallCost+"원");
+
     }
 }

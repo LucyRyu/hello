@@ -8,8 +8,8 @@ public class VarTypeExample {
     public static void main (String [] args){
 
         int myInt = 1000000000;
-        //int myInt = 1,000,000,000;
-        //java ver.7부터 숫자사이 ,가 업데이트됨.
+        //int myInt = 1_000_000_000;
+        //java ver.7부터 숫자사이 _가 업데이트됨.
 
         long myLong = 1000000000000000000L; //값을 long타입으로 하려면 숫자 끝에 L입력.
 
