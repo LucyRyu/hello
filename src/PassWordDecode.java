@@ -25,6 +25,8 @@ public class PassWordDecode {
         int squareData = 0; // 제곱값을 저장할 변수
         String resultPassWord = ""; // 최종결과
 
+
+
         firstLiteral = inputData.substring(0,1);
         //첫글자 자르기
         firstLiteral = firstLiteral.toUpperCase();
@@ -33,11 +35,18 @@ public class PassWordDecode {
         countLiteral = inputData.length();
         //문자열 카운트
 
-        //문자열 카운트한 값 제곱
-        squareData = countLiteral*countLiteral;
+        if(countLiteral>=7){
+            System.out.print("비밀번호 생성:");
+            System.out.println(groundLiteral1 + firstLiteral + inputData.substring(1) + groundLiteral2);
+        }
 
-        System.out.print("비밀번호 생성:");
-        System.out.println(groundLiteral1+ firstLiteral + inputData.substring(1)+squareData+groundLiteral2);
+        else {
+            //문자열 카운트한 값 제곱
+            squareData = countLiteral * countLiteral;
+
+            System.out.print("비밀번호 생성:");
+            System.out.println(groundLiteral1 + firstLiteral + inputData.substring(1) + squareData + groundLiteral2);
+        }
 
     }
 }

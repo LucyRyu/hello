@@ -21,9 +21,13 @@ public class PasswordGenerator {
 
         targetStr = targetStr.substring(0, 1).toUpperCase() + targetStr.substring(1);
 
-        String passwordGenerated = prefix + targetStr + squareLengthOfChar + postfix;
-
-        System.out.println(passwordGenerated);
-
+        if(targetStr.length() >= 7) {
+            String passwordGenerated = prefix + targetStr + postfix;
+            System.out.println(passwordGenerated);
+        }
+        else{
+            String passwordGenerated = prefix + targetStr + squareLengthOfChar + postfix;
+            System.out.println(passwordGenerated);
+        }
     }
 }
