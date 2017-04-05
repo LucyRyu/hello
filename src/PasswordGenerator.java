@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 /**
  * Created by danawacomputer on 2017-04-05.
+ * scanner , substring, length, toUpperCase 메소드 이용
  */
 public class PasswordGenerator {
 

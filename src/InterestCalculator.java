@@ -18,8 +18,9 @@ public class InterestCalculator {
         double interestRate = 0; //이율
         double interest = 0; //이자
 
-        System.out.print("원금을 입력하세요: ");
         Scanner in = new Scanner(System.in);
+
+        System.out.print("원금을 입력하세요: ");
         principal = in.nextInt(); //숫자로 입력받음 - 원금
 
         System.out.print("기간을 입력하세요: ");
@@ -34,7 +35,7 @@ public class InterestCalculator {
         이자계산공식: 이자 = 원금 * 이율(연이율) * (월/12)
         기간: 연
          */
-        interest = principal * (interestRate/100) * (months/12);
+        interest = principal * (interestRate / 100) * (months / 12);
 
 
         //Output
@@ -42,5 +43,6 @@ public class InterestCalculator {
         48개월 후 당신은 0_000_000원을 받을 수 있습니다.
          */
         System.out.println(months + "개월 후 당신은 " + (interest + principal) + "원을 받을 수 있습니다.");
+        // (interest + principal) 대신 원금+이익을 나타내는 변수를 선언하여서 대입하여도 상관없음.
     }
 }
