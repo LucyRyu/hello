@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  * 예)
  * 입력:hello
- * 출력: $$Hello25$$
+ * 출력: $$Hello25##
  */
 public class PassWordDecode {
     public static void main (String[] args){
