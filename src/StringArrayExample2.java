@@ -17,7 +17,6 @@ public class StringArrayExample2 {
         //2. 글자수가 3글자 이하인 element의 배열을 출력
         //새로운 배열을 만들어서 출력
 
-
         int arrCount = 0;
 
         for (String e : arr) {

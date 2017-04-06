@@ -23,6 +23,5 @@ public class StringArrayExample {
         System.out.printf("갯수: " + countWord + "\n");
         int average = sumResult / countWord;
         System.out.printf("평균: " + average + "\n");
-
     }
 }
