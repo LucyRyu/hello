@@ -9,16 +9,22 @@ public class CelToFah {
     public static void main (String [] args)
     {
         int CelTemp = 0;
-        int FahTemp = 0;
+
 
         System.out.println("섭씨를 입력하세요: ");
         Scanner scan = new Scanner(System.in);
         CelTemp = scan.nextInt();
 
 
-        FahTemp = (int)(CelTemp*1.8) + 32;
 
-        System.out.println("화씨: "+FahTemp+" ℉");
-
+        System.out.println("화씨: "+changeTempCelToFah(CelTemp)+" ℉");
     }
+
+    public static double changeTempCelToFah (int Cel){
+        double FahTemp = 0;
+        FahTemp = (int)(Cel*1.8) + 32;
+        return FahTemp;
+    }
+
+
 }
