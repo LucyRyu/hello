@@ -24,36 +24,5 @@ public class StringArrayExample {
         int average = sumResult / countWord;
         System.out.printf("평균: " + average + "\n");
 
-
-        //2. 글자수가 3글자 이하인 element의 배열을 출력
-        for (String e : arr) {
-            if (e.length() <= 3) {
-                System.out.println(e);
-            }
-        }
-
-
-        //2. 글자수가 3글자 이하인 element의 배열을 출력
-        //새로운 배열을 만들어서 출력
-        String[] arr2 = new String[10];
-        String tempString = "";
-        int count = 0;
-
-        for (int i = 0; i < arr.length; i++) {
-
-            if (arr[i].length() <= 3) {
-                count++;
-                tempString = arr[i];
-                arr2[count] = tempString;
-            }
-            sumResult = sumResult + arr.length;
-        }
-
-
-        for (int i = 0; i < arr.length; i++) {
-            if (arr2[i] != null) {
-                System.out.println(arr2[i]);
-            }
-        }
     }
 }
