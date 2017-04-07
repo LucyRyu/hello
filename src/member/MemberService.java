@@ -36,7 +36,7 @@ public class MemberService {
     }
 
     public double calcAverageIdChar(List<Member> list) {
-        int result = 0;
+        double result = 0;
         String id = "";
         int idNumber = 0;
 
@@ -44,9 +44,14 @@ public class MemberService {
             id = String.valueOf(memberlist.getEmail().indexOf("@"));
             idNumber = Integer.parseInt(id);
             result = result + idNumber;
+            System.out.println(idNumber);
         }
         System.out.println("아이디 길이의 합: " + result);
-        System.out.println("아이디 값의 평균: " + result/list.size());
+        System.out.println("사람 수: " + list.size());
+        System.out.println("아이디 값의 평균: " + (double)result/list.size());
+
+        result =  result/list.size();
+        System.out.printf("아이디 값의 평균: %1.2f",result);
 
         return result;
     }
