@@ -4,7 +4,7 @@ public class PasswordGeneratorScanService {
 
     public String scanWord (){
 
-        //input from keyborad
+        //input from keyboard
         Scanner in = new Scanner(System.in);
 
         System.out.println("단어를 하나 입력하세요: ");
