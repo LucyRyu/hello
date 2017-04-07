@@ -10,21 +10,13 @@ public class CelToFah {
     {
         int CelTemp = 0;
 
-
         System.out.println("섭씨를 입력하세요: ");
         Scanner scan = new Scanner(System.in);
         CelTemp = scan.nextInt();
 
-
-
-        System.out.println("화씨: "+changeTempCelToFah(CelTemp)+" ℉");
+        // main 함수 내에서 새로운 객체를 생성하여서 호출하여 출력한다
+        changeTempCelToFahService service = new changeTempCelToFahService();
+        double result = service.changeTempCelToFah(CelTemp);
+        System.out.println(result);
     }
-
-    public static double changeTempCelToFah (int Cel){
-        double FahTemp = 0;
-        FahTemp = (int)(Cel*1.8) + 32;
-        return FahTemp;
-    }
-
-
 }
