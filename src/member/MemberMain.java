@@ -23,7 +23,6 @@ public class MemberMain {
         Member list8 = new Member("이기봉", 26, "010-3009-5732", "lkb573@gmail.com");
         Member list9 = new Member("진하영", 24, "010-3033-3247", "vnfflvdl1@gmail.com");
 
-
         List<Member> list = new ArrayList<>();
 
         list.add(list1);
