@@ -1,6 +1,7 @@
 package member;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MemberMain {
@@ -19,8 +20,12 @@ public class MemberMain {
         Member list5 = new Member("이가원", 25, "010-6439-5943", "dlrkdnjs1211@gmail.com");
         Member list6 = new Member("임준성", 20, "010-9972-8210", "wnstjd9972@gmail.com");
         Member list7 = new Member("김세원", 27, "010-4734-6373", "sewon0613@naver.com");
+        Member list8 = new Member("이기봉", 26, "010-3009-5732", "lkb573@gmail.com");
+        Member list9 = new Member("진하영", 24, "010-3033-3247", "vnfflvdl1@gmail.com");
+
 
         List<Member> list = new ArrayList<>();
+
         list.add(list1);
         list.add(list2);
         list.add(list3);
@@ -28,7 +33,9 @@ public class MemberMain {
         list.add(list5);
         list.add(list6);
         list.add(list7);
-
+        list.add(list8);
+        list.add(list9);
+        //Arrays.asList(list1, list2, list3, list4, list5, list6, list7, list8, list9);
 
         MemberService service = new MemberService();
         service.calcAverageAge(list);
