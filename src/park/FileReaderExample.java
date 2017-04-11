@@ -1,6 +1,6 @@
 package park;
 
-
+import javax.tools.Diagnostic;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -9,48 +9,78 @@ import java.util.List;
 
 /**
  * Created by danawacomputer on 2017-04-10.
+ * 문제1, List<Park>로 변환
+ * 문제2, 국가가 US가 아닌 볼파크 수는?
+ * 문제3, alias가 있는 볼파크 수는?
+ * 문제4, 볼파크 이름의 글자수 평균은?
  */
 public class FileReaderExample {
 
-    public static void main(String[] args) throws Exception { // 예외를 처리하지 않겠다
+    public static void main(String[] args) throws Exception {
+        //throws Exception: 예외를 처리하지 않고 프로그램을 실행하겠다는 의미
 
         FileReader fr = new FileReader("src\\Parks.csv");
+        BufferedReader br = new BufferedReader(fr);
+        //BufferedReader(fr)을 데코레이션이라고 한다.
 
-        BufferedReader br = new BufferedReader(fr); // 파일을 좀 더 쉽게 조작 할 수 있음
+        List<KindOfPark> list = new ArrayList<>();
 
-        List<Park> list = new ArrayList();
+        br.readLine();
+        //기본 form은 제거
+        //두번째 라인부터 읽는다는 의미
+        //파일입력 및 출력 방법1
 
         String line = "";
+        while ((line = br.readLine()) != null) {
 
-        while ((line = br.readLine()) !=null) {
+            String[] splitted = line.split(",");
 
-            String [] splitted = line.split(",");
+            List<String> splitted1 = Arrays.asList(line.split(","));
+            // 자르자마자 바로 List로 하는 법
 
-            Park p11 = new Park(splitted[0],splitted[1], splitted[2], splitted[3], splitted[4], splitted[5]);
-            list.add(p11);
+            //System.out.println(splitted[0] +" "+ splitted[1]);
 
-            System.out.println();
+            //Todo: * 문제1, List<Park>로 변환
+
+            //KindOfPark park = new KindOfPark(splitted[0], splitted[1], splitted[2], splitted[3], splitted[4], splitted[5]);
+            //list.add(park);
+
+            KindOfPark park = new KindOfPark();
+            park.setParkKey(splitted[0]);
+            park.setParkName(splitted[1]);
+            park.setParkAlias(splitted[2]);
+            park.setCity(splitted[3]);
+            park.setState(splitted[4]);
+            park.setCountry(splitted[5]);
+
+            list.add(park);
+
+            System.out.println(list);
+            for(KindOfPark e: list){
+                System.out.println(e.getCity());
+            }
 
         }
-        int notUsParkNumber = ParkService.choiceOfState(list);
-        int haveAliasParkNumber = ParkService.choiceOfAlias(list);
-        double avgOfParkNameNumber = ParkService.avgOfParkName(list);
 
-        System.out.printf("US가 아닌 볼 파크 수는 %d개 입니다.\n", notUsParkNumber);
-        System.out.printf("별명이 있는 볼 파크 수는 %d개 입니다.\n", haveAliasParkNumber);
-        System.out.printf("볼파크 이름의 글자 평균은 %.1f 입니다.\n", avgOfParkNameNumber);
+        ParkService.howManyHaveUSContry(list);
+        ParkService.howManyHaveAlias(list);
+        ParkService.CountStringLength(list);
 
+        /*
+        //파일입력 및 출력 방법2
+        while(true) {
+            String line = br.readLine();
+            //한 줄씩 읽어서 String으로 리턴
+            String[] splitted = line.split(",");
+            for(String s : splitted) {
+                System.out.println(s);
+            }
 
-//        while (true){
-//            String line = br.readLine(); // 요 아이가 한줄 씩 읽어줌
-//            String [] splitted = line.split(",");
-//            for(String e : splitted) System.out.println(e);
-//
-//            if(line == null) break;
-//
-//        }
-
-
-
+            if(br.readLine()==null){
+                break;
+            }
+            System.out.println(line);
+        }
+        */
     }
 }

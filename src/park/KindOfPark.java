@@ -1,25 +1,30 @@
 package park;
 
+import javax.tools.Diagnostic;
+
 /**
  * Created by danawacomputer on 2017-04-10.
  */
-public class Park {
+public class KindOfPark {
 
     private String parkKey;
     private String parkName;
     private String parkAlias;
-    private String City;
-    private String State;
-    private String Country;
+    private String city;
+    private String state;
+    private String country;
 
-    public Park(String parkKey, String parkName, String parkAlias
-            , String City, String State, String Country ) {
+    public KindOfPark() {
+
+    }
+
+    public KindOfPark(String s, String s1, String s2, String s3, String s4, String s5) {
         this.parkKey = parkKey;
         this.parkName = parkName;
         this.parkAlias = parkAlias;
-        this.City = City;
-        this.State = State;
-        this.Country = Country;
+        this.city = city;
+        this.state = state;
+        this.country = country;
     }
 
     public String getParkKey() {
@@ -47,27 +52,26 @@ public class Park {
     }
 
     public String getCity() {
-        return City;
+        return city;
     }
 
     public void setCity(String city) {
-        City = city;
+        this.city = city;
     }
 
     public String getState() {
-        return State;
+        return state;
     }
 
     public void setState(String state) {
-        State = state;
+        this.state = state;
     }
 
     public String getCountry() {
-        return Country;
+        return country;
     }
 
     public void setCountry(String country) {
-        Country = country;
+        this.country = country;
     }
-
 }
