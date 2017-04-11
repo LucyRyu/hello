@@ -1,6 +1,5 @@
 package park;
 
-import javax.tools.Diagnostic;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -55,16 +54,18 @@ public class FileReaderExample {
 
             list.add(park);
 
-            System.out.println(list);
-            for(KindOfPark e: list){
+            //System.out.println(list);
+            /*for(KindOfPark e: list){
                 System.out.println(e.getCity());
-            }
+            }*/
 
         }
 
-        ParkService.howManyHaveUSContry(list);
-        ParkService.howManyHaveAlias(list);
-        ParkService.CountStringLength(list);
+        ParkService service = new ParkService();
+        service.howManyHaveUSContry(list);
+        service.howManyHaveAlias(list);
+        service.CountStringLength(list);
+        service.getParkIncludeAlias(list);
 
         /*
         //파일입력 및 출력 방법2
