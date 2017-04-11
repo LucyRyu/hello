@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class PlayerService {
 
-    //todo: 최대연봉
+    /*//todo: 최대연봉
     public static Player getHighestSalaryPlayer(List<Player> list){
         Player highestSalaryPlayer = new Player();
         for(Player e : list){
@@ -20,7 +20,7 @@ public class PlayerService {
         }
         //System.out.println(list);
         return null;
-    }
+    }*/
 
     //todo: 최저연봉
     public Player getLowestSalaryPlayer (List<Player> list){

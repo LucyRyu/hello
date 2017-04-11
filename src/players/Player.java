@@ -11,7 +11,7 @@ public class Player {
     private String playerId;
     private int salary;
 
-    public Player(){
+    public Player(String s, int i, int parseInt, int anInt){
 
     }
 
