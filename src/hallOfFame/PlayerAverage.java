@@ -16,6 +16,8 @@ public class PlayerAverage {
     public PlayerAverage() {
     }
 
+
+
     public String getPlayerId() {
         return playerId;
     }

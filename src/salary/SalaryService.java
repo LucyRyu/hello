@@ -27,7 +27,7 @@ public class SalaryService {
     public Salary whoGetTheLowestSalary(List<Salary> list) {
         Salary lowestSalaryPlayer = new Salary();
         for(Salary e : list){
-            if(e.getSalary()>=lowestSalaryPlayer.getSalary()){
+            if(e.getSalary()>lowestSalaryPlayer.getSalary()){
                 e.setSalary(lowestSalaryPlayer.getSalary());
             }
             else{
@@ -39,11 +39,14 @@ public class SalaryService {
 
     //todo: 평균연봉 출력
     public double calAverageSalary(List<Salary> list) {
-        double AveragerResult = 0;
-        for (Salary s : list) {
-            AveragerResult = AveragerResult + s.getSalary();
+        Salary Average = new Salary();
+        for (Salary s : list){
+
+            Average.setSalary(s.getSalary());System.out.println(Average.getSalary());
         }
-        System.out.printf("평균연봉: %1.2f\n", (AveragerResult / list.size()));
+
+        System.out.println(list.size());
+        System.out.printf("평균연봉: %1.2f\n", (Average.getSalary() / list.size()));
         return 0;
     }
 

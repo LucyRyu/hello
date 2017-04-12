@@ -24,6 +24,7 @@ public class SalaryMain {
         //두번째 라인부터 읽는다는 의미
         //파일입력 및 출력 방법1
 
+        br.readLine();
         String line = "";
         while ((line = br.readLine()) != null) {
             String[] splitted = line.split(",");
